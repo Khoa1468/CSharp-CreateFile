@@ -23,9 +23,9 @@ namespace CreateFile
                 {
                     PrintOutput.Println($"{entry.Key}. {entry.Value[0]}");
                 }
-                string CheckString = Input.GetInput("Your Choice: ");
+                string CheckString = Input.GetInput("Your Choice (type 'quit' or 'exit' to exit): ");
+                if (CheckString.ToLower().Equals("quit") || CheckString.ToLower().Equals("exit")) break;
                 CheckInput.Check(CheckString, Languages).Run();
-                break;
             }
         }
 

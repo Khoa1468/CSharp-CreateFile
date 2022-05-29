@@ -13,7 +13,8 @@ namespace CreateFile
             BaseLang LanguageResult = new CannotFindLanguage();
             foreach (BaseLang lang in LangsData.languages)
             {
-                if (lang.key.Contains(CheckString))
+                if (CheckString == "") break;
+                else if (lang.key.Contains(CheckString))
                 {
                     LanguageResult = lang;
                 }
